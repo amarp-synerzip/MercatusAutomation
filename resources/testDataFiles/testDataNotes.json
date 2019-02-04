@@ -1,0 +1,8 @@
+{
+    "T72251636": {
+        "Objective": "TC_T72251636_ Check 'Add note' icon present in Asset",
+        "TabName": "Assets",
+        "ButtonName":"Add Notes"
+    }
+    
+}
