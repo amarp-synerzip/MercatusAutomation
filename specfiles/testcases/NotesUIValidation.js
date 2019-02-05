@@ -2,9 +2,9 @@
 exports.__esModule = true;
 require('jasmine-spec-name-patch');
 var Logger_1 = require("../utilities/Logger");
-var numberOfRetry = 2;
 var LoginPage_1 = require("../pages/LoginPage"); //changes needed  class name and file name
 var HomePage_1 = require("../pages/HomePage"); //changes needed  class name and file name 
+var numberOfRetry = 2;
 var testData = require("../../resources/testDataFiles/testDataNotes.json"); //changes needed  change file name
 describe("NotesUIValidation_", function () {
     var TCID;

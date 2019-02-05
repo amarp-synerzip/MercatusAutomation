@@ -23,6 +23,7 @@ export class CreateNote extends CommonUtils {
             this.clickElement(this.getMapValue("SELECTANYASSET"));
         }
     }
+
     public selectNotes() {
         Logger.debug("Inside Method selectAsset.selectNotes ");
         this.clickElement(this.getMapValue("Notes"));
@@ -33,11 +34,13 @@ export class CreateNote extends CommonUtils {
         this.clickElement(this.getMapValue("btnAction"))
         this.rightClickElement(this.getMapValue("btnCreateNote"));
      }
+
     public clickOnDeleteNote() {
         Logger.debug("Inside Method selectNotes.clickOnDeleteNote ");
         this.clickElement(this.getMapValue("btnAction"))
         this.rightClickElement(this.getMapValue("clickOnDeleteNote"));
     }
+    
     public clickOnCopyeNote() {
         Logger.debug("Inside Method selectNotes.clickOnCopyeNote ");
         // this.newMethod();

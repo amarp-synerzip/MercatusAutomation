@@ -1,15 +1,12 @@
-var utl = require('util');
-let path = require('path');
-var PropertiesReader = require('../../node_modules/properties-reader');
-var appData = require("../../resources/appConfig.json");
 import { Logger } from '../utilities/Logger';
 import { CommonUtils } from '../utilities/CommonUtils';
 
+let path = require('path');
 
-
-
+var utl = require('util');
+var PropertiesReader = require('../../node_modules/properties-reader');
+var appData = require("../../resources/appConfig.json");
 var objProperties = PropertiesReader('././resources/propertiesFiles/LoginPage.properties');  //Change file name
-
 
 export class LoginPage extends CommonUtils {   //change class name
 
@@ -23,7 +20,6 @@ export class LoginPage extends CommonUtils {   //change class name
 		this.openApplication(url);
 	};
 
-
 	public enterUsername(searchValue: string): void {
 		Logger.debug("Inside Method LoginPage.enterUsername ");
 		this.setElementText(this.getMapValue("Username_Email_Password")
@@ -36,14 +32,11 @@ export class LoginPage extends CommonUtils {   //change class name
 			.replace("VALUES", "Next"));
 	};
 
-
-
 	public enteEmail(searchValue: string): void {
 		Logger.debug("Inside Method LoginPage.enteEmail ");
 		this.setElementText(this.getMapValue("Username_Email_Password")
 			.replace("VALUES", "Email"), searchValue);
 	};
-
 
 	public enterPassword(searchValue: string): void {
 		Logger.debug("Inside Method LoginPage.enterPassword ");
@@ -57,14 +50,11 @@ export class LoginPage extends CommonUtils {   //change class name
 			.replace("VALUES", "Sign in"));
 	};
 
-	
 	public LoginTransaction(userName, password) {
 		Logger.debug("Inside Method LoginPage.LoginTransaction ");
 		if (userName != null) {
 			this.enterUsername(userName);
 		} else { this.enterUsername(appData.userId); }
-
-
 		this.clickNextButton();
 		if (password != null) {
 			this.enterPassword(password);
@@ -74,11 +64,4 @@ export class LoginPage extends CommonUtils {   //change class name
 		}
 		this.clickSinginButton();
 	}
-
-
-
-
-
-
-
 }

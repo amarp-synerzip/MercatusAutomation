@@ -10,12 +10,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var utl = require('util');
-var path = require('path');
-var PropertiesReader = require('../../node_modules/properties-reader');
-var appData = require("../../resources/appConfig.json");
 var Logger_1 = require("../utilities/Logger");
 var CommonUtils_1 = require("../utilities/CommonUtils");
+var path = require('path');
+var utl = require('util');
+var PropertiesReader = require('../../node_modules/properties-reader');
+var appData = require("../../resources/appConfig.json");
 var objProperties = PropertiesReader('././resources/propertiesFiles/LoginPage.properties'); //Change file name
 var LoginPage = /** @class */ (function (_super) {
     __extends(LoginPage, _super);

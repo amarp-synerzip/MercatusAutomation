@@ -1,9 +1,7 @@
 ///npm cache clean --force
 //declare var require: any;
-import { protractor, by, By, $, $$, browser, element } from 'protractor';
 import { Logger } from './Logger';
 //var Q= require('q');
-
 
 export class CommonUtils {
 
@@ -32,7 +30,6 @@ export class CommonUtils {
 		}
 	};
 
-
 	protected browserWaitAngular() {
 		browser.wait(function () {
 			return browser.executeScript(' return || window.angular');
@@ -40,7 +37,6 @@ export class CommonUtils {
 	};
 
 	///ak  
-
 	private getLocatorString(locator: string): any {
 		Logger.debug("Inside Method CommonUtils.getLocatorString");
 		let by: any;
@@ -64,7 +60,6 @@ export class CommonUtils {
 		browser.driver.findElement(by).click();
 	};
 
-
 	protected doubleClickElement(locator: string): any {
 		Logger.debug("Inside Method CommonUtils.doubleClickElement");
 		let by = this.getLocatorString(locator);
@@ -83,7 +78,6 @@ export class CommonUtils {
 		browser.driver.findElement(by).getCSSProperty(cssAttributeValue);
 	};
 
-
 	protected setElementText(locator: string, textValue: string): any {
 		Logger.debug("Inside Method CommonUtils.setElementText");
 		let by = this.getLocatorString(locator);
@@ -97,7 +91,6 @@ export class CommonUtils {
 	};
 
 	////av
-
 	protected rightClickElement(locator: string): any {
 		Logger.debug("Inside Method CommonUtils.rightClickElement");
 		let by = this.getLocatorString(locator);
@@ -108,29 +101,29 @@ export class CommonUtils {
 		});
 	};
 
-
-
 	protected getAllOptions(locator: string): any {
 		Logger.debug("Inside Method WebElementOperation.getAllOptions");
 		let by = this.getLocatorString(locator);
 
 		//browser.driver.findElements(by).
 		return element.all(by).map(function (elem) {
+			
 			//return browser.driver.findElements(by).map(function(elem){
 			return elem.getText();
 		});
 	};
+
 	protected selectByAttribute(locator: string): any {
 		Logger.debug("Inside Method WebElementOperation.selectByAttribute")
 		let by = this.getLocatorString(locator);
 		browser.driver.findElement(by).getValue();
 
 	};
+
 	protected selectByIndex(locator: string): any {
 		Logger.debug("Inside Method WebElementOperation.selectByIndex")
 		let by = this.getLocatorString(locator);
 		browser.driver.findElement(by).getValue();
 
 	};
-
 }

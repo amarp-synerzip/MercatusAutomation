@@ -1,7 +1,6 @@
 
 //var Jasmine2HtmlReporter = require('protractor-jasmine2-html-reporter');
 
-import { Config } from 'protractor';
 const globalAny: any = global;
 declare const allure: any;
 let waitTime:number=600000;
